@@ -32,78 +32,114 @@ void loop() {
       }
       delay(50);
     }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    while (x == 1) {
-      y = analogRead(pot);
-      y = map(y, 3, 1020, 0, 70);
-      lcd.clear();
-      if (y == 53) {
-        lcd.print("you win");
-        delay(1000);
+    /////////////////////////////////////////////////////////////
+    if (digitalRead(sw3) == LOW) {
+      while (x == 1) {
+        y = analogRead(pot);
+        y = map(y, 3, 1020, 0, 35);
         lcd.clear();
-        lcd.print("Next level 3");
-        delay(1000);
-        break;
-      } else {
-        lcd.print(y);
+        if (y == 25) {
+          lcd.print("you win");
+          delay(1000);
+          lcd.clear();
+          lcd.print("Next level 3");
+          delay(1000);
+          break;
+        } else {
+          lcd.print(y);
+        }
+        delay(50);
       }
-      delay(50);
-    }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    while (x == 1) {
-      y = analogRead(pot);
-      y = map(y, 3, 1020, 0, 180);
-      lcd.clear();
-      if (y == 69) {
-        lcd.print("you win");
-        delay(1000);
+      //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      while (x == 1) {
+        y = analogRead(pot);
+        y = map(y, 3, 1020, 0, 70);
         lcd.clear();
-        lcd.print("Next level 4");
-        delay(1000);
-        break;
-      } else {
-        lcd.print(y);
+        if (y == 53) {
+          lcd.print("you win");
+          delay(1000);
+          lcd.clear();
+          lcd.print("Next level 4");
+          delay(1000);
+          break;
+        } else {
+          lcd.print(y);
+        }
+        delay(50);
       }
-      delay(50);
-    }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    while (x == 1) {
-      y = analogRead(pot);
-      y = map(y, 3, 1020, 0, 256);
-      lcd.clear();
-      if (y == 100) {
-        lcd.print("you win");
-        delay(1000);
+      //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      while (x == 1) {
+        y = analogRead(pot);
+        y = map(y, 3, 1020, 0, 180);
         lcd.clear();
-        lcd.print("Next level 5");
-        delay(1000);
-        break;
-      } else {
-        lcd.print(y);
+        if (y == 69) {
+          lcd.print("you win");
+          delay(1000);
+          lcd.clear();
+          lcd.print("Next level 5");
+          delay(1000);
+          break;
+        } else {
+          lcd.print(y);
+        }
+        delay(50);
       }
-      delay(50);
-    }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    while (x == 1) {
-      y = analogRead(pot);
-      y = map(y, 3, 1020, 0, 512);
-      lcd.clear();
-      if (y == 234) {
-        lcd.print("you win");
-        delay(1000);
+      //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      while (x == 1) {
+        y = analogRead(pot);
+        y = map(y, 3, 1020, 0, 256);
         lcd.clear();
-        lcd.print("You beat the");
-        lcd.setCursor(0,1);
-        lcd.print("game");
-        delay(1000);
-        break;
-      } else {
-        lcd.print(y);
+        if (y == 100) {
+          lcd.print("you win");
+          delay(1000);
+          lcd.clear();
+          lcd.print("Next level 6");
+          delay(1000);
+          break;
+        } else {
+          lcd.print(y);
+        }
+        delay(50);
       }
-      delay(50);
+      ///////////////////////////////////////////////////////
+      while (x == 1) {
+        y = analogRead(pot);
+        y = map(y, 3, 1020, 0, 450);
+        lcd.clear();
+        if (y == 200) {
+          lcd.print("you win");
+          delay(1000);
+          lcd.clear();
+          lcd.print("Next level 6");
+          delay(1000);
+          break;
+        } else {
+          lcd.print(y);
+        }
+        delay(50);
+      }
+      //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      while (x == 1) {
+        y = analogRead(pot);
+        y = map(y, 3, 1020, 0, 512);
+        lcd.clear();
+        if (y == 234) {
+          lcd.print("you win");
+          delay(1000);
+          lcd.clear();
+          lcd.print("You beat the");
+          lcd.setCursor(0, 1);
+          lcd.print("game");
+          delay(1000);
+          break;
+        } else {
+          lcd.print(y);
+        }
+        delay(50);
+      }
+      delay(5000);
+      lcd.clear();
+      lcd.print("replay?");
     }
-    delay(5000);
-    lcd.clear();
-    lcd.print("replay?");
   }
 }
